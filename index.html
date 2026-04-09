@@ -461,7 +461,55 @@
       line-height: 1.7;
     }
 
-    
+    .type-grid-section {
+      margin-top: 32px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+    }
+    .type-grid-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent-strong);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .type-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 10px;
+    }
+    .type-chip {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .type-chip:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 12px rgba(108, 141, 113, 0.12);
+    }
+    .chip-code {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent-strong);
+      letter-spacing: 0.03em;
+    }
+    .chip-cn {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .chip-intro {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
     .result-layout {
       display: grid;
       gap: 18px;
@@ -691,17 +739,37 @@
         <div class="hero-actions hero-actions-single">
           <button id="startBtn" class="btn-primary">开始测试</button>
         </div>
-        <div style="padding-top: 2rem; display: flex; flex-direction: column;">
-          <span>
-            原作者：
-            <a href="https://space.bilibili.com/417038183">B站@蛆肉儿串儿</a>
-          </span>
-          <span>
-            托管：Cloudflare (免费)
-          </span>
-          <span>
-            域名：Spaceship (自费)
-          </span>
+        <div class="type-grid-section">
+          <div class="type-grid-label">27 种人格，你是哪一个？</div>
+          <div class="type-grid">
+            <div class="type-chip"><span class="chip-code">CTRL</span><span class="chip-cn">拿捏者</span><span class="chip-intro">怎么样，被我拿捏了吧？</span></div>
+            <div class="type-chip"><span class="chip-code">BOSS</span><span class="chip-cn">领导者</span><span class="chip-intro">方向盘给我，我来开。</span></div>
+            <div class="type-chip"><span class="chip-code">GOGO</span><span class="chip-cn">行者</span><span class="chip-intro">gogogo~ 出发咯</span></div>
+            <div class="type-chip"><span class="chip-code">THIN-K</span><span class="chip-cn">思考者</span><span class="chip-intro">已深度思考 100s。</span></div>
+            <div class="type-chip"><span class="chip-code">THAN-K</span><span class="chip-cn">感恩者</span><span class="chip-intro">我感谢苍天！我感谢大地！</span></div>
+            <div class="type-chip"><span class="chip-code">MUM</span><span class="chip-cn">妈妈</span><span class="chip-intro">或许…我可以叫你妈妈吗？</span></div>
+            <div class="type-chip"><span class="chip-code">LOVE-R</span><span class="chip-cn">多情者</span><span class="chip-intro">爱意太满，现实显得有点贫瘠。</span></div>
+            <div class="type-chip"><span class="chip-code">SEXY</span><span class="chip-cn">尤物</span><span class="chip-intro">您就是天生的尤物！</span></div>
+            <div class="type-chip"><span class="chip-code">ATM-er</span><span class="chip-cn">送钱者</span><span class="chip-intro">你以为我很有钱吗？</span></div>
+            <div class="type-chip"><span class="chip-code">MONK</span><span class="chip-cn">僧人</span><span class="chip-intro">没有那种世俗的欲望。</span></div>
+            <div class="type-chip"><span class="chip-code">POOR</span><span class="chip-cn">贫困者</span><span class="chip-intro">我穷，但我很专。</span></div>
+            <div class="type-chip"><span class="chip-code">SOLO</span><span class="chip-cn">孤儿</span><span class="chip-intro">我哭了，我怎么会是孤儿？</span></div>
+            <div class="type-chip"><span class="chip-code">OJBK</span><span class="chip-cn">无所谓人</span><span class="chip-intro">我说随便，是真的随便。</span></div>
+            <div class="type-chip"><span class="chip-code">FAKE</span><span class="chip-cn">伪人</span><span class="chip-intro">已经，没有人类了。</span></div>
+            <div class="type-chip"><span class="chip-code">JOKE-R</span><span class="chip-cn">小丑</span><span class="chip-intro">原来我们都是小丑。</span></div>
+            <div class="type-chip"><span class="chip-code">MALO</span><span class="chip-cn">吗喽</span><span class="chip-intro">人生是个副本，我只是一只吗喽。</span></div>
+            <div class="type-chip"><span class="chip-code">IMSB</span><span class="chip-cn">傻者</span><span class="chip-intro">认真的么？我真的是傻逼么？</span></div>
+            <div class="type-chip"><span class="chip-code">IMFW</span><span class="chip-cn">废物</span><span class="chip-intro">我真的…是废物吗？</span></div>
+            <div class="type-chip"><span class="chip-code">DEAD</span><span class="chip-cn">死者</span><span class="chip-intro">我，还活着吗？</span></div>
+            <div class="type-chip"><span class="chip-code">ZZZZ</span><span class="chip-cn">装死者</span><span class="chip-intro">我没死，我只是在睡觉。</span></div>
+            <div class="type-chip"><span class="chip-code">SHIT</span><span class="chip-cn">愤世者</span><span class="chip-intro">这个世界，构石一坨。</span></div>
+            <div class="type-chip"><span class="chip-code">FUCK</span><span class="chip-cn">草者</span><span class="chip-intro">操！这是什么人格？</span></div>
+            <div class="type-chip"><span class="chip-code">WOC!</span><span class="chip-cn">握草人</span><span class="chip-intro">卧槽，我怎么是这个人格？</span></div>
+            <div class="type-chip"><span class="chip-code">OH-NO</span><span class="chip-cn">哦不人</span><span class="chip-intro">哦不！我怎么会是这个人格？！</span></div>
+            <div class="type-chip"><span class="chip-code">DRUNK</span><span class="chip-cn">酒鬼</span><span class="chip-intro">烈酒烧喉，不得不醉。</span></div>
+            <div class="type-chip"><span class="chip-code">Dior-s</span><span class="chip-cn">屌丝</span><span class="chip-intro">等着我屌丝逆袭。</span></div>
+            <div class="type-chip"><span class="chip-code">HHHH</span><span class="chip-cn">傻乐者</span><span class="chip-intro">哈哈哈哈哈哈。</span></div>
+          </div>
         </div>
       </div>
     </section>
